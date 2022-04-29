@@ -12,7 +12,7 @@ export const Home = () => {
 
 	return (
 		<>
-
+			{/* carousel displaying latest news/inventory */}
 			<Carousel>
 				<Carousel.Item>
 					<img
@@ -50,6 +50,10 @@ export const Home = () => {
 					</Carousel.Caption>
 				</Carousel.Item>
 			</Carousel>
+			<br />
+
+			{/* product advertisement on home page section */}
+
 			<Row xs={1} md={3} className="g-4">
 				{Array.from({ length: 6 }).map((_, idx) => (
 					<Col>
