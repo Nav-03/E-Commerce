@@ -6,6 +6,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 
 export const Home = () => {
 	// const { store, actions } = useContext(Context);
@@ -65,6 +66,11 @@ export const Home = () => {
 									This is a longer card with supporting text below as a natural
 									lead-in to additional content. This content is a little bit longer.
 								</Card.Text>
+								<Button variant="primary" size="sm" >
+									Learn more
+								</Button>
+
+
 							</Card.Body>
 						</Card>
 					</Col>
