@@ -20,7 +20,7 @@ export const Registration = () => {
                                                 <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                                                 <div className="form-outline flex-fill mb-0">
                                                     <input type="text" id="form3Example1c" className="form-control" />
-                                                    <label className="form-label" >Your Name</label>
+                                                    <label className="form-label" >Name</label>
                                                 </div>
                                             </div>
 
@@ -28,7 +28,7 @@ export const Registration = () => {
                                                 <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                 <div className="form-outline flex-fill mb-0">
                                                     <input type="email" id="form3Example3c" className="form-control" />
-                                                    <label className="form-label" >Your Email</label>
+                                                    <label className="form-label" >Email</label>
                                                 </div>
                                             </div>
 
