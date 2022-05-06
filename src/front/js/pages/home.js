@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import Carousel from 'react-bootstrap/Carousel'
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 import { ProductCard } from "../component/productCards.jsx";
 import { ProductCarousel } from "../component/productCarousel.jsx";
 
@@ -11,9 +12,15 @@ export const Home = () => {
 
 	return (
 		<>
-			<ProductCarousel />
+			<Zoom>
+				<ProductCarousel />
+			</Zoom>
+
 			<br />
-			<ProductCard />
+			<Fade bottom>
+				<ProductCard />
+			</Fade>
+
 		</>
 	);
 
