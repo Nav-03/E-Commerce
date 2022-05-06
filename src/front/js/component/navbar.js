@@ -23,13 +23,10 @@ export const Navbar = () => {
 							</a>
 							<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 								<li><a className="dropdown-item" href="/demo">Demo</a></li>
-								<li><a className="dropdown-item" href="/single">Single</a></li>
+								<li><a className="dropdown-item" href="/checkout">Checkout</a></li>
 								<li><hr className="dropdown-divider" /></li>
 								<li><a className="dropdown-item" href="/registration">Registration</a></li>
 							</ul>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
 						</li>
 					</ul>
 					<form className="d-flex">

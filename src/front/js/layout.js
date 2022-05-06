@@ -6,7 +6,9 @@ import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import { Registration } from "./pages/registration"
+import { Payment } from "./pages/checkout.js"
 import injectContext from "./store/appContext";
+
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -25,6 +27,9 @@ const Layout = () => {
 					<Switch>
 						<Route exact path="/">
 							<Home />
+						</Route>
+						<Route exact path="/checkout">
+							<Payment />
 						</Route>
 						<Route exact path="/demo">
 							<Demo />
