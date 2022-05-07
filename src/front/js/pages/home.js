@@ -7,6 +7,7 @@ import Zoom from 'react-reveal/Zoom';
 import { ProductCard } from "../component/productCards.jsx";
 import { ProductCarousel } from "../component/productCarousel.jsx";
 
+
 export const Home = () => {
 	// const { store, actions } = useContext(Context);
 

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaShoppingCart } from 'react-icons/fa';
+
 
 export const Navbar = () => {
 	return (
@@ -15,7 +17,7 @@ export const Navbar = () => {
 							<a className="nav-link active" aria-current="page" href="/registration">Register</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#">Link</a>
+							<a className="nav-link " href="/checkout"><FaShoppingCart /></a>
 						</li>
 						<li className="nav-item dropdown">
 							<a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,7 +25,7 @@ export const Navbar = () => {
 							</a>
 							<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 								<li><a className="dropdown-item" href="/demo">Demo</a></li>
-								<li><a className="dropdown-item" href="/checkout">Checkout</a></li>
+								<li><a className="dropdown-item " href="/checkout">Checkout</a></li>
 								<li><hr className="dropdown-divider" /></li>
 								<li><a className="dropdown-item" href="/registration">Registration</a></li>
 							</ul>
