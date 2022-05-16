@@ -1,14 +1,11 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 import Fade from "react-reveal/Fade";
 
 export const ProductCard = () => {
   return (
     <>
-      <div className="d-flex flex-row">
+      <div className="d-flex flex-row ">
         <Fade bottom>
           <Card className="bg-dark text-white">
             <Card.Img
@@ -43,6 +40,7 @@ export const ProductCard = () => {
           </Card>
         </Fade>
       </div>
+      <br />
       <div>
         <Fade>
           <Card className="bg-dark text-white">
@@ -62,6 +60,7 @@ export const ProductCard = () => {
           </Card>
         </Fade>
       </div>
+      <br />
       <div>
         <Fade>
           <Card className="bg-dark text-white">
