@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
-import { BannerCardsSmall } from "../component/bannerCardsSmall.jsx";
-import { ProductCarousel } from "../component/productCarousel.jsx";
-import { BannerLarge } from "../component/bannerLarge.jsx";
-import { BannerThin } from "../component/bannerThin.jsx";
+import { BannerCardsSmall } from "../component/banners/bannerCardsSmall.jsx";
+import { BannerCarousel } from "../component/banners/bannerCarousel.jsx";
+import { BannerLarge } from "../component/banners/bannerLarge.jsx";
+import { BannerThin } from "../component/banners/bannerThin.jsx";
 
 export const Home = () => {
   // const { store, actions } = useContext(Context);
@@ -15,7 +14,7 @@ export const Home = () => {
   return (
     <>
       <Zoom>
-        <ProductCarousel />
+        <BannerCarousel />
       </Zoom>
 
       <br />

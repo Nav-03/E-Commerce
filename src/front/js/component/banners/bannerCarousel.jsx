@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 
-export const ProductCarousel = () => {
+export const BannerCarousel = () => {
   return (
     <>
       {/* carousel displaying latest news/inventory */}
