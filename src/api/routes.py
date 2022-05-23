@@ -31,10 +31,18 @@ def create_user():
     return jsonify(user.serialize())
 
 
-@api.route('/user', methods=['GET'])
-@jwt_required()
-def user():
-    current_user_id = get_jwt_identity()
-    user = User.query.get(current_user_id)
+# @api.route('/user', methods=['GET'])
+# @jwt_required()
+# def user():
+#     current_user_id = get_jwt_identity()
+#     user = User.query.get(current_user_id)
 
-    return jsonify({"id": user.id, "email": user.email }), 200
+#     return jsonify({"id": user.id, "email": user.email }), 200
+
+
+
+@api.route('/user', methods=['GET'])
+def get_users():
+    users = User.query.all()
+    all_users = list(map(lambda x:x.serialize(),users))
+    return jsonify(all_users), 200
