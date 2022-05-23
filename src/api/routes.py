@@ -40,9 +40,40 @@ def create_user():
 #     return jsonify({"id": user.id, "email": user.email }), 200
 
 
+@api.route('/token', methods=['POST'])
+def create_token():
+    if request.json is None:
+        raise APIException("Missing the payload")
+    email = request.json.get('email', None)
+    password = request.json.get('password', None)
+    user = User.query.filter_by(email=email, password=password).first()
+    if user is None:
+        raise APIException("Wrong email and password",401)
+    access_token = create_access_token(identity=user.id)
+    return jsonify({ "token": access_token, "user_id": user.id })
+
+
 
 @api.route('/user', methods=['GET'])
 def get_users():
     users = User.query.all()
     all_users = list(map(lambda x:x.serialize(),users))
     return jsonify(all_users), 200
+
+
+@api.route('/user/<int:user_id>', methods=['GET'])
+def getGuest(user_id):
+    users = User.query.get(user_id)
+    if users is None:
+        raise APIException('Guest not found', status_code=404)
+    return jsonify(users.serialize()), 200
+
+@api.route('/user/token/<string:token>', methods=['GET'])
+def get_user_from_token(token):
+    identity = decode_token(token)
+    print("identity", identity)
+    
+    users = User.query.get(identity["sub"])
+    if users is None:
+        raise APIException('Guest not found', status_code=404)
+    return jsonify(users.serialize()), 200
