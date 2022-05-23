@@ -9,14 +9,6 @@ from flask_jwt_extended import jwt_required, get_jwt_identity, create_access_tok
 api = Blueprint('api', __name__)
 
 
-# @api.route('/hello', methods=['POST', 'GET'])
-# def handle_hello():
-
-#     response_body = {
-#         "message": "Hello! I'm a message that came from the backend, check the network tab on the google inspector and you will see the GET request"
-#     }
-
-#     return jsonify(response_body), 200
 
 
 
@@ -31,6 +23,11 @@ def create_user():
     user = User(name=name, email=email, password=password)
     db.session.add(user)
     db.session.commit()
+    access_token = create_access_token(identity=user.id)
+    user.user_hash = access_token
+    db.session.add(user)
+    db.session.commit()
+
     return jsonify(user.serialize())
 
 
